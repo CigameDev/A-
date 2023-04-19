@@ -42,7 +42,7 @@ namespace A_Star
             int deltaX = Math.Abs(x - nodeEnd.x);
             int deltaY = Math.Abs(y - nodeEnd.y);
             int min = deltaX <=deltaY ? deltaX : deltaY;
-            hCost = deltaX * 14 + Math.Abs(deltaX - deltaY) * 10;
+            hCost = min * 14 + Math.Abs(deltaX - deltaY) * 10;
             fCost = gCost + hCost;
         }
         public bool IsOnList(List<Node>list)
